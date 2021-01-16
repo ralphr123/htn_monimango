@@ -40,13 +40,13 @@ export default function MainPage() {
     ])
 
     return (
-        <>
+        <div className="main">
         <Header/>
-        <div className="container">
-            <BarChart data={cards}/>
-            <StockList cards={cards}/>
+            <div className="content-container">
+                <BarChart data={cards}/>
+                <StockList cards={cards}/>
+            </div>
         </div>
-        </>
         
     )
 }

@@ -1,4 +1,9 @@
-.container {
+.content-container {
     width: 70%;
     margin: auto;
+}
+
+.main {
+    height: 100vh;
+    overflow: auto;
 }

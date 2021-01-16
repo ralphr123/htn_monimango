@@ -1,8 +1,8 @@
 import React from 'react';
 import './Stock.css';
-import Up from '../../images/up.png';
-import Down from '../../images/down.png';
-import Hold from '../../images/hold.png';
+import Up from '../../images/sticker/up.png';
+import Down from '../../images/sticker/down.png';
+import Hold from '../../images/sticker/hold.png';
 export default function StockList({cards}) {
     
     return (
