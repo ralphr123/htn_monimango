@@ -67,3 +67,8 @@ h1 > span::before {
     font-weight: 400;
     line-height: 34px;
 }
+
+.skip {
+    color: #f4a261;
+    
+}

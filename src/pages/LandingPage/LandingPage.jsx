@@ -2,6 +2,7 @@ import React from 'react'
 import PersonalDetailsForm from '../../components/PersonalDetailsForm/PersonalDetailsForm';
 import './LandingPage.css'
 import logo from '../../images/MoniMango_logo.svg'
+import { Link } from 'react-tiger-transition'
 export default function LandingPage() {
     return (
         <>
@@ -10,6 +11,9 @@ export default function LandingPage() {
                 <div className="form-container center">
                     <h1>Enter Details to <span>Continue</span></h1>
                     <PersonalDetailsForm/>
+                    <Link to="/main" transition="glide-left" className="skip">
+                        Skip now
+                    </Link>
                 </div>
             
             </div>
@@ -22,8 +26,6 @@ export default function LandingPage() {
                 Social Media has a large influence on the stock market.
 
             Our app aims to look at what stocks are currently being favoured or dismissed by people on social media using a sentimental analysis model.
-
-
                 </div>
             </div>
         </div>
