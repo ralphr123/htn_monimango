@@ -37,9 +37,6 @@ const BarChart = ({data}) => {
                 },
                 legend: {
                     display: false
-                 },
-                 tooltips: {
-                    enabled: false
                  }
             }}
             height={500} width={100} />
