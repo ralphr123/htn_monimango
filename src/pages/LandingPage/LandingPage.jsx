@@ -15,13 +15,13 @@ export default function LandingPage() {
             </div>
             <div className="about-container">
                 <div className="logo">
-                    <img src={logo} alt="MoniMango" className="logo_img"/>
+                    <img src={logo} alt="MoniMango" className="logo-img"/>
                     <h1 className="logo-name">MoniMango</h1>
                 </div>
                 <div className="description">
                 Social Media has a large influence on the stock market.
 
-                Our app aims to look at what stocks are currently being favoured or dismissed by people on social media using a sentimental analysis model.
+            Our app aims to look at what stocks are currently being favoured or dismissed by people on social media using a sentimental analysis model.
 
 
                 </div>

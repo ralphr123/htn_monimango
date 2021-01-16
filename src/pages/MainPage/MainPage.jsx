@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import BarChart from '../../components/Charts/BarChart';
+import Header from '../../components/Header/Header';
 import StockList from '../../components/StockList/StockList';
 import './MainPage.css';
 
@@ -39,11 +40,13 @@ export default function MainPage() {
     ])
 
     return (
+        <>
+        <Header/>
         <div className="container">
-            <div className="upchart"></div>
             <BarChart data={cards}/>
             <StockList cards={cards}/>
         </div>
+        </>
         
     )
 }

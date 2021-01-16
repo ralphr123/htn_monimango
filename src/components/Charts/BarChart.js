@@ -28,7 +28,20 @@ const BarChart = ({data}) => {
                     borderWidth: 1
                 }]
             }}
-            options = {{maintainAspectRatio: false}}
+            options = {{
+                maintainAspectRatio: false,
+                title: {
+                    display: true,
+                    text: 'Number of mentions about a stock',
+                    fontSize: 20
+                },
+                legend: {
+                    display: false
+                 },
+                 tooltips: {
+                    enabled: false
+                 }
+            }}
             height={500} width={100} />
            
         </div>

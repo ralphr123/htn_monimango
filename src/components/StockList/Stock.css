@@ -1,5 +1,5 @@
 .card {
-    width: 80%;
+    width: 100%;
     padding: 15px;
     border-radius: 1rem;
     border: 2px solid #EAEEF7;
@@ -10,7 +10,7 @@
     flex-direction: column;
 }
 
-h1 > span {
+.card h1 > span {
     display: inline-block;
     font-size: 1rem;
 }
