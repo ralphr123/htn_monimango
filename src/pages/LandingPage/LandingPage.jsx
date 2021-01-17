@@ -15,7 +15,7 @@ export default function LandingPage() {
         <div className="main-container">
             <div className="details-container">
                 <div className="form-container center">
-                    <div class="form-title">Sign up for our newsletter!</div>
+                    <div className="form-title">Sign up for our newsletter!</div>
                     <PersonalDetailsForm/>
                     <br />
                     <br />
@@ -26,7 +26,7 @@ export default function LandingPage() {
                 </div>
             </div>
             <div className="about-container">
-                <Carousel defaultWait={3000}>
+                <Carousel defaultWait={8000}>
 
                 <Slide right>
                     <div className="content">
@@ -35,12 +35,14 @@ export default function LandingPage() {
                             <h1 className="logo-name">MoniMango</h1>
                         </div>
                         <div className="description">
-                        Social Media has a large influence on the stock market.
+                        Social media has a large influence on the stock market, even more so today.
+                        Reddit is one of the largest social media platforms on Earth.
                         <br/>
-                        MoniMango aims to look at what stocks are currently being favoured or dismissed by people on social media using a sentimental analysis model.
+                        <br/>
+                        MoniMango analyzes Reddit posts from the last 24 hours, picking out the most mentioned stocks and analyzing them for you.
                         <br/>   
                         <br/>
-                        Not sure what to do with your current shares? Looking to dive into the stock market? We'll help you know what others are thinking.
+                        Not sure what to do with your current shares? Curious to know what other people are thinking? MoniMango will fill you in.
                         </div>
                     </div>
                 </Slide>
@@ -48,7 +50,7 @@ export default function LandingPage() {
                     <div className="content two">
                         <img src={screenshot} alt="Screenshot" className="screenshot"/>
                         <div className="description 2">
-                            Find out the top stocks that are being mentioned on famous social media platsforms like Reddit. Receive recommendations on whether to buy hold or sell.
+                            We use a top of the line IBM Watson Tone Analyzer to approximate the group-sentiment for the most mentioned stocks on Reddit.
                         </div>
                     </div>
                 </Slide>
