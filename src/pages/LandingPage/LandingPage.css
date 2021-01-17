@@ -24,6 +24,7 @@
 
 
 
+
 .form-container {
     display: flex;
     flex-direction: column;
@@ -59,6 +60,7 @@ h1 > span::before {
 
 .logo-name {
     display: inline;
+    font-size: 3rem;
     color: #f4a261;
 }
 
@@ -66,7 +68,7 @@ h1 > span::before {
     margin: 30px 0px 20px 0;
     width: 400px;
     font-weight: 400;
-    line-height: 34px;
+    line-height: 30px;
 }
 
 .skip {
