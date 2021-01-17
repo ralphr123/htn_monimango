@@ -45,7 +45,6 @@ export default function MainPage() {
         if (!window.sessionStorage.getItem("mm_response")) {
             axios.get('https://wicked-phantom-05767.herokuapp.com/https://cryptic-woodland-77043.herokuapp.com/reddit')
             .then((response) => {
-                console.log(response.data);
                 window.sessionStorage.setItem("mm_response", JSON.stringify(response.data));
                 setCards(response.data);
                 document.getElementById("animation").className = "none";

@@ -17,9 +17,6 @@ export default function LandingPage() {
                 <div className="form-container center">
                     <div className="form-title">Sign up for our newsletter!</div>
                     <PersonalDetailsForm/>
-                    <br />
-                    <br />
-                    <br />
                     <Link to="/main" transition="glide-left" className="skip">
                         Skip  for now
                     </Link>
