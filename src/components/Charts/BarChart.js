@@ -1,14 +1,14 @@
 import React from 'react';
 import {Bar} from 'react-chartjs-2';
 
-const BarChart = ({data}) => {
+const BarChart = ({data, className, id}) => {
     return (
-        <div>
+        <div className={className} id={id}>
             <Bar data={{
-                labels: data.map(card=>card.stockName),
+                labels: data.map(card=>card.ticker),
                 datasets: [{
                     label: '# of Mentions',
-                    data: data.map(card=>card.mention),
+                    data: data.map(card=>card.count),
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
                         'rgba(54, 162, 235, 0.2)',

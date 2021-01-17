@@ -34,7 +34,7 @@
     text-transform: capitalize;
 }
 
-.status {
+.action {
     align-self:flex-end;
     position: relative;
     top: 34px;

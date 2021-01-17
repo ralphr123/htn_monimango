@@ -9,10 +9,11 @@ export default function StockList({cards}) {
         <>
             {cards.map((card, index)=>{ 
                 return <div key = {index} className="card">
-                        <h1>{card.stockName} <span>({card.stockTick})</span></h1>
-                        <h2 className={card.status === 'buy' ? "green" : card.status === "hold" ? 'orange' : "red"}>{card.status}</h2> 
-                        <img src={card.status === 'buy' ? Up: card.status === 'sell' ? Down : Hold } alt="status" class="status"/>
-                        <p>{card.mention} people mentioned this.</p> 
+                        <h1>{card.ticker}</h1>
+                        <h2 className={card.action === 'Buy' ? "green" : card.action === "Hold" ? 'orange' : "red"}>{card.action}</h2>
+                        <p>{card.tone}</p> 
+                        <img src={card.action === 'Buy' ? Up: card.action === 'Sell' ? Down : Hold } alt="action" className="action"/>
+                        <p>{card.count} people mentioned this.</p> 
                 </div> 
             })}
         </>
