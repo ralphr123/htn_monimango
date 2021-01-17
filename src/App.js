@@ -5,6 +5,7 @@ import Main from './pages/MainPage/MainPage';
 import { Navigation, Route, glide  } from 'react-tiger-transition';
 import "react-tiger-transition/styles/main.min.css";
 import './App.css';
+import DetailsPage from './pages/DetailsPage/DetailsPage';
 
 // Animations
 
@@ -24,6 +25,7 @@ function App() {
       <Navigation>
         <Route exact path = "/"><Home/></Route>
         <Route exact path = "/main"><Main/></Route>
+        <Route path="/main/:ticker"><DetailsPage/></Route>
       </Navigation>
     </Router>
   );

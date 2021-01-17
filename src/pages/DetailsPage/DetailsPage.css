@@ -1,0 +1,12 @@
+.stock-container {
+    width: 70%;
+    margin: auto;
+}
+
+.back-link {
+    color: #ec9913;
+    text-decoration: none;
+    margin-left: 10px;
+    transition: 3s;
+
+}

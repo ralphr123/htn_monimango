@@ -9,56 +9,56 @@ import axios from 'axios';
 export default function MainPage() {
 
     const [cards, setCards] = useState([
-        // {
-        //     "count":37,
-        //     "ticker":"GME",
-        //     "action":"Sell",
-        //     "tone":"Sadness"
-        // },
-        // {
-        //     "count":11,
-        //     "ticker":"BB",
-        //     "action":"Buy",
-        //     "tone":"Joy"
-        // },
-        // {  
-        //     "count":5,
-        //     "ticker":"PLTR",
-        //     "action":"Hold",
-        //     "tone":"Tentative"
-        // }
-        // ,{ 
-        //     "count":5,
-        //     "ticker":"TSLA",
-        //     "action":"Hold",
-        //     "tone":"Analytical"
-        // },
-        // {
-        //     "count":3,
-        //     "ticker":"FB",
-        //     "action":"Buy",
-        //     "tone":"Joy"
-        // }
+        {
+            "count":37,
+            "ticker":"GME",
+            "action":"Sell",
+            "tone":"Sadness"
+        },
+        {
+            "count":11,
+            "ticker":"BB",
+            "action":"Buy",
+            "tone":"Joy"
+        },
+        {  
+            "count":5,
+            "ticker":"PLTR",
+            "action":"Hold",
+            "tone":"Tentative"
+        }
+        ,{ 
+            "count":5,
+            "ticker":"TSLA",
+            "action":"Hold",
+            "tone":"Analytical"
+        },
+        {
+            "count":3,
+            "ticker":"FB",
+            "action":"Buy",
+            "tone":"Joy"
+        }
     ]);
 
-    useEffect(()=> {
-        if (!window.sessionStorage.getItem("mm_response")) {
-            axios.get('https://wicked-phantom-05767.herokuapp.com/https://cryptic-woodland-77043.herokuapp.com/reddit')
-            .then((response) => {
-                window.sessionStorage.setItem("mm_response", JSON.stringify(response.data));
-                setCards(response.data);
-                document.getElementById("animation").className = "none";
-                document.getElementById("animation-container").className = "none";
-                document.getElementById("chart-container").className = "opacity-1";
-            });
-        } else {
-            setCards(JSON.parse(window.sessionStorage.getItem("mm_response")));
-            document.getElementById("animation").className = "none";
-            document.getElementById("animation-container").className = "none";
-            document.getElementById("chart-container").className = "opacity-1";
-        }
+    // useEffect(()=> {
+    //     if (!window.sessionStorage.getItem("mm_response")) {
+    //         axios.get('https://wicked-phantom-05767.herokuapp.com/https://cryptic-woodland-77043.herokuapp.com/reddit')
+    //         .then((response) => {
+    //             window.sessionStorage.setItem("mm_response", JSON.stringify(response.data));
+    //             setCards(response.data);
+    //             document.getElementById("animation").className = "none";
+    //             document.getElementById("animation-container").className = "none";
+    //             document.getElementById("chart-container").className = "opacity-1";
+    //         });
+    //     } else {
+    //         setCards(JSON.parse(window.sessionStorage.getItem("mm_response")));
+    //         document.getElementById("animation").className = "none";
+    //         document.getElementById("animation-container").className = "none";
+    //         document.getElementById("chart-container").className = "opacity-1";
+    //     }
         
-    }, [])
+    // }, [])
     
 
     return (
