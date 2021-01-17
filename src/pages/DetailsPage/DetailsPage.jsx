@@ -26,7 +26,6 @@ export default function DetailsPage() {
         let stockChartXValues = [];
         let stockChartYValues = [];
         if (tickerName && tickerName !== "" && tickerName !== "/main") {
-            console.log(tickerName);
             axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=${tickerName}&apikey=${API}`)
             .then(response => {
                 for(var key in response.data['Monthly Time Series']) {
