@@ -8,18 +8,22 @@ import Slide from 'react-reveal/Slide';
 import Carousel from '../../components/Carousel/Carousel';
 export default function LandingPage() {
 
+    if (window.localStorage.getItem("mm_user")) window.location.replace("/main");
+
     return (
         <>
         <div className="main-container">
             <div className="details-container">
                 <div className="form-container center">
-                    <h1>Enter Details to <span>Continue</span></h1>
+                    <div class="form-title">Sign up for our newsletter!</div>
                     <PersonalDetailsForm/>
+                    <br />
+                    <br />
+                    <br />
                     <Link to="/main" transition="glide-left" className="skip">
-                        Skip now
+                        Skip  for now
                     </Link>
                 </div>
-            
             </div>
             <div className="about-container">
                 <Carousel defaultWait={3000}>

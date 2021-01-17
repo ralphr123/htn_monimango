@@ -65,6 +65,10 @@ export default function MainPage() {
     return (
         <div className="main">
             <Header/>
+            <div class="welcome">
+                <div className="welcome-title">Welcome back, <span className="dark-orange">Thomas Bangcok</span></div>
+                <div className="welcome-subtitle">Here's today's pickings.</div>
+            </div>
             <div className="content-container">
                 <div className="flex-center" id="animation-container">
                     <img src={MoniMango} alt="logo" className="moni-mango" id="animation"/>

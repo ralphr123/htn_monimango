@@ -12,6 +12,7 @@
     height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .about-container {
@@ -24,12 +25,16 @@
 
 
 
+.form-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+}
 
 .form-container {
     display: flex;
     flex-direction: column;
     width: 400px;
-    margin-left: 30%;
 }
 
 h1 > span::before {
@@ -73,7 +78,7 @@ h1 > span::before {
 
 .skip {
     color: #f4a261;
-    
+    margin-top: 7px;
 }
 
 .screenshot {
