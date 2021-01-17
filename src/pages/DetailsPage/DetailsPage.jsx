@@ -21,10 +21,10 @@ export default function DetailsPage() {
     const location = useLocation();
     const tickerName = location.pathname.replace("/main/", "");
     const API = '5E6AWU6AK5ZEKALN';
-    let stockChartXValues = [];
-    let stockChartYValues = [];
-
+    
     useEffect(() => {
+        let stockChartXValues = [];
+        let stockChartYValues = [];
         axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=${tickerName}&apikey=${API}`)
         .then(response => {
             for(var key in response.data['Monthly Time Series']) {
