@@ -24,7 +24,7 @@ export default function DetailsPage() {
     let stockChartXValues = [];
     let stockChartYValues = [];
 
-    useEffect(()=> {
+    useEffect(() => {
         axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=${tickerName}&apikey=${API}`)
         .then(response => {
             for(var key in response.data['Monthly Time Series']) {
@@ -42,7 +42,7 @@ export default function DetailsPage() {
                 description: response.data.Description
             })
         })
-    }, [])
+    }, [tickerName])
 
     return (
         <div className="details-page-container">
