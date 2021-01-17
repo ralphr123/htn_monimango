@@ -66,8 +66,8 @@
         -webkit-filter: brightness(1);
     }
     50%  {
-        transform: scale(1.15);
-        filter: brightness(0.8);
+        transform: scale(1.06);
+        filter: brightness(0.85);
         -webkit-filter: brightness(0.8);
     }
     100% {

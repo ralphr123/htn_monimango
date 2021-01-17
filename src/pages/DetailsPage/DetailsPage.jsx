@@ -23,28 +23,27 @@ export default function DetailsPage() {
     const API = '5E6AWU6AK5ZEKALN';
     let stockChartXValues = [];
     let stockChartYValues = [];
-    // useEffect(()=> {
-    //     axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=${tickerName}&apikey=${API}`)
-    //     .then(response => {
-    //         for(var key in response.data['Monthly Time Series']) {
-    //             stockChartXValues.push(key);
-    //             stockChartYValues.push(response.data['Monthly Time Series'][key]['1. open']);
-    //         }
-    //         setXValues(stockChartXValues.reverse());
-    //         setYValues(stockChartYValues.reverse());
-    //     })
-    // }, [])
 
-    // useEffect(()=> {
-    //     axios.get(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${tickerName}&apikey=${API}`)
-    //     .then (response => {
-    //         console.log(response.data)
-    //         setInformation({
-    //             name: response.data.Name,
-    //             description: response.data.Description
-    //         })
-    //     })
-    // },[]);
+    useEffect(()=> {
+        axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=${tickerName}&apikey=${API}`)
+        .then(response => {
+            for(var key in response.data['Monthly Time Series']) {
+                stockChartXValues.push(key);
+                stockChartYValues.push(response.data['Monthly Time Series'][key]['1. open']);
+            }
+            setXValues(stockChartXValues.reverse());
+            setYValues(stockChartYValues.reverse());
+        })
+
+        axios.get(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${tickerName}&apikey=${API}`)
+        .then (response => {
+            setInformation({
+                name: response.data.Name,
+                description: response.data.Description
+            })
+        })
+    }, [])
+
     return (
         <div className="details-page-container">
             <Header/>
@@ -54,7 +53,7 @@ export default function DetailsPage() {
             <div className="stock-container">
                 <br/>
                 <LineChart xValues={xValues} yValues={yValues}/>
-                <h1>{information.name} ({tickerName})</h1>
+                <h1 className="stock-title">{information.name} ({tickerName})</h1>
                 <br/>
                 <p>{information.description}</p>
             </div>
