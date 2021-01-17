@@ -1,0 +1,22 @@
+.details-page-container {
+    height: 120vh;
+    overflow: scroll;
+}
+
+.stock-container {
+    width: 70%;
+    margin: auto;
+    padding-bottom: 200px;
+}
+
+.stock-title {
+    margin-top: 30px;
+}
+
+.back-link {
+    color: #ec9913;
+    text-decoration: none;
+    margin-left: 10px;
+    transition: 3s;
+
+}
