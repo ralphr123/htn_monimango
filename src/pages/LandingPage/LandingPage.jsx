@@ -6,8 +6,8 @@ import { Link } from 'react-tiger-transition';
 import screenshot from '../../images/screenshot.png';
 import Slide from 'react-reveal/Slide';
 import Carousel from '../../components/Carousel/Carousel';
-
 export default function LandingPage() {
+
     return (
         <>
         <div className="main-container">
@@ -42,7 +42,7 @@ export default function LandingPage() {
                 </Slide>
                 <Slide right>
                     <div className="content two">
-                        <img src={screenshot} alt="Screenshot" class="screenshot"/>
+                        <img src={screenshot} alt="Screenshot" className="screenshot"/>
                         <div className="description 2">
                             Find out the top stocks that are being mentioned on famous social media platsforms like Reddit. Receive recommendations on whether to buy hold or sell.
                         </div>
