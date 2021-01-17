@@ -25,23 +25,26 @@ export default function DetailsPage() {
     useEffect(() => {
         let stockChartXValues = [];
         let stockChartYValues = [];
-        axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=${tickerName}&apikey=${API}`)
-        .then(response => {
-            for(var key in response.data['Monthly Time Series']) {
-                stockChartXValues.push(key);
-                stockChartYValues.push(response.data['Monthly Time Series'][key]['1. open']);
-            }
-            setXValues(stockChartXValues.reverse());
-            setYValues(stockChartYValues.reverse());
-        })
-
-        axios.get(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${tickerName}&apikey=${API}`)
-        .then (response => {
-            setInformation({
-                name: response.data.Name,
-                description: response.data.Description
+        if (tickerName && tickerName !== "" && tickerName !== "/main") {
+            console.log(tickerName);
+            axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY&symbol=${tickerName}&apikey=${API}`)
+            .then(response => {
+                for(var key in response.data['Monthly Time Series']) {
+                    stockChartXValues.push(key);
+                    stockChartYValues.push(response.data['Monthly Time Series'][key]['1. open']);
+                }
+                setXValues(stockChartXValues.reverse());
+                setYValues(stockChartYValues.reverse());
             })
-        })
+    
+            axios.get(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${tickerName}&apikey=${API}`)
+            .then (response => {
+                setInformation({
+                    name: response.data.Name,
+                    description: response.data.Description
+                })
+            })
+        }
     }, [tickerName])
 
     return (

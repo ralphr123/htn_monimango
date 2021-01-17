@@ -10,8 +10,10 @@ import DetailsPage from '../../pages/DetailsPage/DetailsPage';
 export default function StockList({cards}) {
 
     const handleCardClick = (e) => {
-        window.location.replace(`/main/${e.target.getAttribute("data-ticker")}`)
-        // console.log(e.target.getAttribute("data-ticker"));
+        e.stopPropagation();
+        if (e.target.getAttribute("data-ticker")) {
+            window.location.replace(`/main/${e.target.getAttribute("data-ticker")}`)
+        }
     }
 
     return (
