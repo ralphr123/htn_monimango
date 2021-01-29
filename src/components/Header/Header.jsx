@@ -7,10 +7,10 @@ export default function Header() {
     return (
         <div className="header">
             <div className="logo-holder">
-                <Link to ="/" transition="glide-right" className="remove-link">
+                {/* <Link to ="/" transition="glide-right" className="remove-link"> */}
                     <img src={logo} alt="MoniMango" className="logo-icon"/>
-                        <h1 className="name">MoniMango</h1>
-                    </Link>
+                        <div className="name">MoniMango</div>
+                {/* </Link> */}
             </div>
         </div>
     )

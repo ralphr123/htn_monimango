@@ -78,6 +78,21 @@ export default function MainPage() {
                 <div className="flex-center" id="animation-container">
                     <img src={MoniMango} alt="logo" className="moni-mango" id="animation"/>
                 </div>
+                <div className="descr-center">
+                    <div className="descr-cont">
+                        <h2>Our API</h2>
+                        <p className="descr">
+                            We look through 750 top reddit posts in r/investing, r/stocks, and r/wallstreetbets.
+                            We scan for the names of 500+ of the most popular stock tickers. 
+                            We use the IBM Watson tone analyzer to predict the mood around those stocks. 
+                            We show you the data. <br /> <br/>
+
+                            <strong>These listing do not count as proffessional advice. The IBM tone analyzer is far from perfect,
+                            especially with the type of language used on these subreddits. Use this app's investment advice
+                            at your own risk.</strong> 
+                        </p>
+                    </div>
+                </div>
                 <BarChart data={cards} className="opacity-0" id="chart-container"/>
                 <StockList cards={cards}/> 
             </div>
