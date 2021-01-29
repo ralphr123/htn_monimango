@@ -8,6 +8,10 @@
     margin-bottom: 30px;
 }
 
+.git-logo:hover {
+    filter: brightness(0.85);
+    cursor: pointer;
+}
 
 .logo-icon {
     width: 75px;
@@ -18,8 +22,9 @@
 
 .logo-holder {
     display: flex;
-    justify-content: center;
-    align-items: center
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
 }
 
 .name {

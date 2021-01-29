@@ -8,38 +8,7 @@ import axios from 'axios';
 
 export default function MainPage() {
 
-    const [cards, setCards] = useState([
-        // {
-        //     "count":37,
-        //     "ticker":"GME",
-        //     "action":"Sell",
-        //     "tone":"Sadness"
-        // },
-        // {
-        //     "count":11,
-        //     "ticker":"BB",
-        //     "action":"Buy",
-        //     "tone":"Joy"
-        // },
-        // {  
-        //     "count":5,
-        //     "ticker":"PLTR",
-        //     "action":"Hold",
-        //     "tone":"Tentative"
-        // }
-        // ,{ 
-        //     "count":5,
-        //     "ticker":"TSLA",
-        //     "action":"Hold",
-        //     "tone":"Analytical"
-        // },
-        // {
-        //     "count":3,
-        //     "ticker":"FB",
-        //     "action":"Buy",
-        //     "tone":"Joy"
-        // }
-    ]);
+    const [cards, setCards] = useState([]);
 
     useEffect(()=> {
         if (!window.sessionStorage.getItem("mm_response")) {

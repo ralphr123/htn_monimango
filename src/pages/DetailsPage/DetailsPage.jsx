@@ -57,7 +57,7 @@ export default function DetailsPage() {
                 <LineChart xValues={xValues} yValues={yValues}/>
                 <h1 className="stock-title">{information.name} ({tickerName})</h1>
                 <br/>
-                <p>{information.description}</p>
+                <p>{information.description ? information.description : <span>Free api call limit exceeded. Please try again in <strong>1</strong> minute(s).</span>}</p>
             </div>
            
         </div>
