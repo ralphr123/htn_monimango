@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-tiger-transition';
+// import { Link } from 'react-tiger-transition';
 import logo from '../../images/MoniMango_logo_orange.svg';
 import './Header.css'
 
