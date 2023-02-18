@@ -11,7 +11,7 @@ export default function PersonalDetailsForm(){
         if (!document.getElementById("form").checkValidity()) return false;
         axios({
             method: 'post',
-            url: 'https://wicked-phantom-05767.herokuapp.com/https://cryptic-woodland-77043.herokuapp.com/newsletter',
+            url: 'https://cryptic-woodland-77043.herokuapp.com/newsletter',
             data: {
                 number: number
             }
